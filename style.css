@@ -1,0 +1,154 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid{
+    width: 100%;
+    height: max-content;
+}
+
+.today{
+    color: red !important;
+}
+
+
+/* btn logout*/
+.gg-log-out {
+    width: 6px;
+    height: 16px;
+    border: 2px solid;
+    transform: scale(var(--ggs,1));
+    border-right: 0;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    margin-left: -10px;
+    color: red;
+}
+.gg-log-out::after,
+.gg-log-out::before {
+    content: "";
+    display: block;
+    position: absolute
+}
+
+.gg-log-out::after {
+    border-top: 2px solid;
+    border-left: 2px solid;
+    transform: rotate(-45deg);
+    width: 8px;
+    height: 8px;
+    left: 4px;
+    bottom: 2px
+}
+.gg-log-out::before {
+    border-radius: 3px;
+    width: 10px;
+    height: 2px;
+    background: currentColor;
+    left: 5px;
+    bottom: 5px
+}
+
+.logout{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.2em 1em 0 0;
+}
+.logout a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+}
+/* btn logout*/
+
+td a{
+    color: #7fcc72;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #216869;
+    padding: 0.5em 1em;
+    border-radius: 3px;
+}
+
+td a:hover{
+    color: #216869;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #7fcc72;
+}
+
+.atrasado{
+    color: red;
+    font-weight: bold;
+}
+
+.hoje{
+    color: green;
+    font-weight: bold;
+}
+
+.search{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 2px;
+}
+
+
+
+.daysofweek{
+    margin-left: -4em;
+    width: 50%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    row-gap: 0.5em;
+    column-gap: 1em;
+}
+
+.daysofweek .days{
+text-align: left;
+margin-left: 0.8em;
+}
+
+.not{
+    visibility: hidden;
+}
+
+  
+  div[role="progressbar"] {
+    --size: 4rem;
+    --bg: #def;
+    --pgPercentage: var(--value);
+    --fg: rgb(51, 153, 59);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background: 
+      radial-gradient(closest-side, white 80%, transparent 0 300%, white 0),
+      conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0)
+      ;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 4);
+    font-weight: bold;
+    color: var(--fg);
+  }
+  
+  div[role="progressbar"]::before {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) '%';
+    background-color: white;
+    border-radius: 50%;
+    width: 3.3em;
+    line-height: 3.3em;
+  }
+
+  
